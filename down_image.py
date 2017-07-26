@@ -8,12 +8,12 @@ import urllib
 class get_mx_image:
     def __init__(self):
         mx_name = raw_input("请输入你想要看的明星名字: ")
-        mx_dir=mx_name
+        mx_dir=mx_name.decode('utf-8').encode('gb2312')
         mx_new_name=quote(mx_name)
         x = raw_input("请输入你想看的页数: ")
         self.name = mx_new_name
         self.page = x
-        self.mx_name = mx_name
+        self.mx_name = mx_name.decode('utf-8').encode('gb2312')
         self.mkpath ="./%s" % (str(mx_dir))
         if os.path.isdir(self.mkpath):
             pass
